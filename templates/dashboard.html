@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+</head>
+<body>
+    <h1>Admin Dashboard</h1>
+    <p>Welcome, {{ session['username'] }}!</p>
+
+    <!-- Links to Post Content and View All Posts -->
+    <a href="{{ url_for('post_content') }}">Post Content</a>
+    <a href="{{ url_for('view_posts') }}">View All Posts</a>
+    <a href="{{ url_for('logout') }}">Logout</a>
+
+    
+    <h2>Course Materials</h2>
+    <ul>
+        {% for url in course_urls %}
+            <li><a href="{{ url }}" target="_blank">Download Course Material {{ loop.index }}</a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

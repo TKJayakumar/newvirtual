@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard</title>
+</head>
+<body>
+    <h2>Student Dashboard</h2>
+    <p>Welcome, {{ session['username'] }}!</p>
+
+    <h3>All Posts</h3>
+    <ul>
+        {% for post in posts %}
+            <li>{{ post }}</li>
+        {% endfor %}
+    </ul>
+    <h2>Course Materials</h2>
+    <ul>
+        {% for url in course_urls %}
+            <li><a href="{{ url }}" target="_blank">Download Course Material {{ loop.index }}</a></li>
+        {% endfor %}
+    </ul>
+
+    <p><a href="{{ url_for('logout') }}">Logout</a></p>
+</body>
+</html>
