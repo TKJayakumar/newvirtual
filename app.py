@@ -12,7 +12,7 @@ app.config['SECRET_KEY'] = 'your_secret_key'
 def get_db_connection():
     return mysql.connector.connect(
         host='virtualdb.c7kcawq6wjvr.eu-north-1.rds.amazonaws.com',
-        user='rootr',
+        user='root',
         password='Onlineawsnm',
         database='virtualdb'
     )
