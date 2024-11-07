@@ -14,7 +14,7 @@ def get_db_connection():
         host='virtualdb.c7kcawq6wjvr.eu-north-1.rds.amazonaws.com',
         user='root',
         password='Onlineawsnm',
-        database='virtualdb'
+        database='virdb'
     )
 
 # Registration Form
@@ -41,7 +41,7 @@ def home():
 
 @app.route('/register', methods=['GET', 'POST'])
 def register():
-    form = RegistrationForm()  # Create an instance of the registration form
+    form = RegistrationForm()
     if form.validate_on_submit():
         username = form.username.data
         conn = get_db_connection()
@@ -59,11 +59,11 @@ def register():
         conn.close()
         flash(f'User {username} registered as {role}', 'success')
         return redirect(url_for('login'))
-    return render_template('register.html', form=form)  # Pass the form to the template
+    return render_template('register.html', form=form)
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
-    form = LoginForm()  # Create an instance of the login form
+    form = LoginForm()
     if form.validate_on_submit():
         username = form.username.data
         conn = get_db_connection()
@@ -72,13 +72,13 @@ def login():
         user = cursor.fetchone()
         cursor.close()
         conn.close()
-        if user and check_password_hash(user[0], form.password.data):  # Check password using hash
+        if user and check_password_hash(user[0], form.password.data):
             session['username'] = username
             session['role'] = user[1]
             flash(f'Welcome, {username}!', 'success')
             return redirect(url_for('dashboard'))
         flash('Invalid credentials', 'danger')
-    return render_template('login.html', form=form)  # Pass the form to the template
+    return render_template('login.html', form=form)
 
 @app.route('/dashboard')
 def dashboard():
@@ -87,16 +87,20 @@ def dashboard():
         'https://virtualbuckeet.s3.eu-north-1.amazonaws.com/mementopython3-english.pdf'
     ]
     role = session.get('role')
+    conn = get_db_connection()
+    cursor = conn.cursor()
+
+    # Fetch all posts to display for both admin and student
+    cursor.execute('SELECT content FROM posts')
+    posts = cursor.fetchall()
+    cursor.close()
+    conn.close()
+
+    # Render appropriate dashboard with posts
     if role == 'admin':
-        conn = get_db_connection()
-        cursor = conn.cursor()
-        cursor.execute('SELECT * FROM posts')
-        posts = cursor.fetchall()
-        cursor.close()
-        conn.close()
         return render_template('admin_dashboard.html', posts=posts, course_urls=course_urls)
     elif role == 'student':
-        return render_template('student_dashboard.html', posts=[], course_urls=course_urls)
+        return render_template('student_dashboard.html', posts=posts, course_urls=course_urls)
     else:
         flash('Please log in first', 'warning')
         return redirect(url_for('login'))
