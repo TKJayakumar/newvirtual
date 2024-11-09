@@ -11,7 +11,7 @@ app.config['SECRET_KEY'] = 'your_secret_key'
 # MySQL Database connection
 def get_db_connection():
     return mysql.connector.connect(
-        host='virtualldb.c7kcawq6wjvr.eu-north-1.rds.amazonaws.com',
+        host='virtuaal.c7kcawq6wjvr.eu-north-1.rds.amazonaws.com',
         user='admin',
         password='virtualdbs',
         database='virtuall_db'
@@ -83,8 +83,8 @@ def login():
 @app.route('/dashboard')
 def dashboard():
     course_urls = [
-        'https://virtuallbucket.s3.eu-north-1.amazonaws.com/mementopython3-english.pdf',
-        'https://virtuallbucket.s3.eu-north-1.amazonaws.com/java_tutorial.pdf'
+        'https://virtuaalbucket.s3.eu-north-1.amazonaws.com/mementopython3-english.pdf',
+        'https://virtuaalbucket.s3.eu-north-1.amazonaws.com/java_tutorial.pdf'
     ]
     role = session.get('role')
     conn = get_db_connection()
