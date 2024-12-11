@@ -50,22 +50,26 @@ This platform leverages **AWS services** to provide a scalable, secure, and inte
 ## 📸 **Screenshots**
 
 ### **1. Homepage**
-![Homepage](https://via.placeholder.com/800x400?text=Homepage)
+![Homepage](https://github.com/TKJayakumar/newvirtual/blob/main/Screenshot/app_1.png)
 
 ### **2. Student Registration**
-![Student Registration](https://via.placeholder.com/800x400?text=Student+Registration)
+![Student Registration](https://github.com/TKJayakumar/newvirtual/blob/main/Screenshot/student_register.png)
 
 ### **3. Student Login**
-![Student Login](https://via.placeholder.com/800x400?text=Student+Login)
+![Student Login](https://github.com/TKJayakumar/newvirtual/blob/main/Screenshot/student_login.png)
 
-### **4. Teacher Dashboard**
-![Teacher Dashboard](https://via.placeholder.com/800x400?text=Teacher+Dashboard)
 
-### **5. Student Dashboard (View 1)**
-![Student Dashboard 1](https://via.placeholder.com/800x400?text=Student+Dashboard+1)
+### **4.Teacher Login**
+![Teacher Dashboard](https://github.com/TKJayakumar/newvirtual/blob/main/Screenshot/teacher_login.png)
 
-### **6. Student Dashboard (View 2)**
-![Student Dashboard 2](https://via.placeholder.com/800x400?text=Student+Dashboard+2)
+
+### **5. Teacher Dashboard**
+![Teacher Dashboard](https://github.com/TKJayakumar/newvirtual/blob/main/Screenshot/teacher_board.png)
+
+### **6. Student Dashboard (View 1)**
+![Student Dashboard 1](https://github.com/TKJayakumar/newvirtual/blob/main/Screenshot/student_dashboard.png)
+
+
 
 
 ## 🏁 **Conclusion**
