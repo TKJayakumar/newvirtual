@@ -45,5 +45,5 @@ This platform leverages **AWS services** to provide a scalable, secure, and inte
 
 - **Demo Link**: [View Demo Application](https://drive.google.com/file/d/1RQcxfirwJYbqVBsR6LFckdUM2kEIM_fo/view?usp=drive_link)
 - **Documentation**: [Read Full Docs](https://drive.google.com/file/d/1CP8Ee7TKwCvASp2YrOPi4zdswgEdqwsY/view?usp=sharing)
-- **Project Repository**: [GitHub Repo](https://github.com/your-repo)
+- **Project Repository**: [GitHub Repo](https://github.com/TKJayakumar/newvirtual)
 
