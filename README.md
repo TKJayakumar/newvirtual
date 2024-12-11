@@ -47,6 +47,27 @@ This platform leverages **AWS services** to provide a scalable, secure, and inte
 - **Documentation**: [Read Full Docs](https://drive.google.com/file/d/1CP8Ee7TKwCvASp2YrOPi4zdswgEdqwsY/view?usp=sharing)
 - **Project Repository**: [GitHub Repo](https://github.com/TKJayakumar/newvirtual)
 
+## 📸 **Screenshots**
+
+### **1. Homepage**
+![Homepage](https://via.placeholder.com/800x400?text=Homepage)
+
+### **2. Student Registration**
+![Student Registration](https://via.placeholder.com/800x400?text=Student+Registration)
+
+### **3. Student Login**
+![Student Login](https://via.placeholder.com/800x400?text=Student+Login)
+
+### **4. Teacher Dashboard**
+![Teacher Dashboard](https://via.placeholder.com/800x400?text=Teacher+Dashboard)
+
+### **5. Student Dashboard (View 1)**
+![Student Dashboard 1](https://via.placeholder.com/800x400?text=Student+Dashboard+1)
+
+### **6. Student Dashboard (View 2)**
+![Student Dashboard 2](https://via.placeholder.com/800x400?text=Student+Dashboard+2)
+
+
 ## 🏁 **Conclusion**
 
 This project highlights the effective use of modern cloud technologies like **AWS EC2**, **AWS S3**, and **AWS RDS** to build a robust and scalable virtual classroom platform. Key achievements include:
